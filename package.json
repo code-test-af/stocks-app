@@ -5,13 +5,31 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production node server.js",
+    "lint": "eslint --ext .js,.js .",
+    "test": "jest"
   },
   "author": "Aidan Fewster (fewstera)",
   "dependencies": {
     "express": "^4.16.2",
     "next": "^4.1.4",
+    "raf": "^3.4.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.2",
+    "eslint": "^4.10.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-react": "^7.4.0",
+    "jest": "^21.2.1",
+    "react-test-renderer": "^16.0.0"
+  },
+  "jest": {
+    "setupFiles": [
+      "raf/polyfill",
+      "./jest-setup.js"
+    ]
   }
 }
