@@ -1,0 +1,17 @@
+{
+  "name": "acuris-code-test",
+  "version": "1.0.0",
+  "description": "Code test for Acuris",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "author": "Aidan Fewster (fewstera)",
+  "dependencies": {
+    "express": "^4.16.2",
+    "next": "^4.1.4",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
+}
