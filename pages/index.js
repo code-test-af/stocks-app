@@ -7,7 +7,7 @@ import Page from '../components/page';
 
 class IndexPage extends React.Component {
     static async getInitialProps() {
-        const res = await fetch(config.companiesApiUrl)
+        const res = await fetch(`${config.apiBaseUrl}/api/companies`);
         return { companies: await res.json() }
     }
 
